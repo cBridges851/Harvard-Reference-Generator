@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Harvard Reference Auto Builder</title>
+</head>
+
+<body>
+	<h1>Input a Link:</h1>
+	<form action="\submit">
+		<input id = "urlBox" 
+			name = "urlBox" 
+			type = "text" 
+			placeholder = "URL"/>
+		
+		<input id = "submit" 
+		name = "submit" 
+		type = "submit" 
+		disabled/>
+	</form>
+	
+	{{ errorMessage }}
+
+	<script>
+		document.querySelector("#urlBox").onkeyup = function() {
+			if (document.querySelector("#urlBox").value === "") {
+				document.querySelector("#submit").disabled = true;
+			} else {
+				document.querySelector("#submit").disabled = false;
+			}
+		}
+	</script>
+</body>
+</html>
