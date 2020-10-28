@@ -1,9 +1,11 @@
-<html>
-<head>
-	<title>Harvard Reference Auto Builder</title>
-</head>
+{% extends "layout.html" %}
 
-<body>
+
+{% block title %}
+	<title>Harvard Reference Auto Builder - Input</title>
+{% endblock %}
+
+{% block container %}
 	<h1>Input a Link:</h1>
 	<form action="\submit">
 		<input id = "urlBox" 
@@ -12,6 +14,7 @@
 			placeholder = "URL"/>
 		
 		<input id = "submit" 
+		class = "submit"
 		name = "submit" 
 		type = "submit" 
 		disabled/>
@@ -28,5 +31,4 @@
 			}
 		}
 	</script>
-</body>
-</html>
+{% endblock %}

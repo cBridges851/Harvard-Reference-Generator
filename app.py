@@ -21,7 +21,7 @@ def submit():
     title = None
     publicationYear = None
     response = None
-    soup = None   
+    soup = None
 
     # CB 2020-10-19 Get the url from the url box
     url = request.args.get("urlBox")

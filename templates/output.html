@@ -1,11 +1,10 @@
-<html>
-<head>
-	<title>Harvard Reference Auto Builder</title>
-</head>
+{% extends "layout.html" %}
 
-<body>
+{% block title %}
+	<title>Harvard Reference Auto Builder - Output</title>
+{% endblock %}
+
+{% block container %}
 	<h1>Here Is Your Generated Harvard Reference:</h1>
 	<p>{{ author }} ({{publicationYear}}). <i>{{ title }}</i>. Available: {{ url }}. Last accessed {{ currentDate}}</p>
-	
-</body>
-</html>
+{% endblock %}
