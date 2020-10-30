@@ -3,6 +3,13 @@
 
 {% block title %}
 	<title>Harvard Reference Auto Builder - Input</title>
+	<script>
+		let errorNumber = {{ errorNumber }};
+		
+		if (errorNumber == 1) {
+			alert("The URL You Inputted Could Not Be Found")
+		} 
+	</script>
 {% endblock %}
 
 {% block container %}
@@ -20,8 +27,6 @@
 		disabled/>
 	</form>
 	
-	{{ errorMessage }}
-
 	<script>
 		document.querySelector("#urlBox").onkeyup = function() {
 			if (document.querySelector("#urlBox").value === "") {

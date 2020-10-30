@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", errorNumber = 0)
 
 @app.route("/submit")
 def submit():
@@ -33,7 +33,7 @@ def submit():
         response = requests.get(url, headers=headers)
         soup = BeautifulSoup(response.text, "html.parser")
     except Exception:
-        return render_template("index.html", errorMessage="The URL You Inputted In The URL Box Could Not Be Found")
+        return render_template("index.html", errorNumber=1)
 
     websiteObjectRetriever = WebsiteObjectRetriever(soup)
     deserializedJson = websiteObjectRetriever.retrieve()

@@ -18,13 +18,14 @@ h1 {
     padding: 1vw;
     align-content: center;
     margin-top: 30vh;
-    height: 25vh;
+    border-radius: 15px;
 }
 
 input {
     font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 50%;
+    border-radius: 10px;
 }
 
 #submit {
@@ -42,5 +43,10 @@ p {
 }
 
 textarea {
-    border: 1px solid #FF0000;
+    width: 95%;
+    font-size: 2em;
+}
+
+a {
+    color: #FFFFFF;
 }
