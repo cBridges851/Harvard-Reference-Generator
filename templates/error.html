@@ -1,14 +1,13 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harvard Reference Auto Builder</title>
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Harvard Reference Auto Builder - Error</title>
+{% endblock %}
+
+{% block container %}
     <p>Oh dear! It appears that not all of the properties could be found at the URL you inputted. 
         Please create a new issue here: 
         <a href="https://github.com/cBridges851/Harvard-Reference-Auto-Builder/issues">https://github.com/cBridges851/Harvard-Reference-Auto-Builder/issues</a>
         with the "url" label.
     </p>
-</body>
-</html>
+{% endblock %}
