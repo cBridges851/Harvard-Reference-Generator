@@ -9,6 +9,6 @@ class WebsiteObjectRetriever():
         try:
             scriptTag = self.soup.find("script")
             scriptTagContents = scriptTag.contents
-            return json.loads(scriptTagContents[0])
+            return json.loads(scriptTagContents[0].strip("digitalData ="))
         except Exception:
             return None

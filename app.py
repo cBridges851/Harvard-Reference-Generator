@@ -77,7 +77,5 @@ def submit():
     currentDate = currentDateFinder.find()
     
     print(publicationYear)
-    if author is None or title is None or publicationYear is None:
-        return render_template("error.html")
 
     return render_template("output.html", url=url, author=author, title=title, publicationYear=publicationYear, currentDate=currentDate)

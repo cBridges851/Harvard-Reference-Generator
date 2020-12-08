@@ -24,6 +24,8 @@ class AuthorFinder():
                 if len(author) == 2:
                     return author[1] + ", " + author[0][0] + "."
 
+            except Exception:
+                return self.deserializedJson["page"]["pageInfo"]["publisher"]
             except Exception as e:
                 print(f"Unable to retrieve info: {e}")
 
