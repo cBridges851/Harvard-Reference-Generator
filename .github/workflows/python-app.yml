@@ -1,0 +1,27 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python application
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+        
+    - name: Actions for Discord
+      # You may pin to the exact commit or the version.
+      # uses: Ilshidur/action-discord@d7aab4ad1d1ec719b41b59cfe6781743792fa929
+      uses: https://discord.com/api/webhooks/785951978026827817/FggBPuUjjJy13nVIB7SdDeHylPXte5JaGlPG6tBL8-z0KPRmaVunf-4jXLPBAk6rMp1u
