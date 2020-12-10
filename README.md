@@ -6,7 +6,7 @@ This project was made because copying and pasting the author, article title, nam
 
 ## Tech/Framework Used
 This project uses Flask, which is a third-party library that is used as a web framework. Python is used for the backend, HTML and CSS are used for the front-end.
-[Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/)
+See the [Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/) for more information.
 
 ## Installation
 This project does not have a public website yet.
