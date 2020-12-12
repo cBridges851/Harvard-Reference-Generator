@@ -30,7 +30,7 @@ def index():
             response = requests.get(url, headers=headers)
             soup = BeautifulSoup(response.text, "html.parser")
         except Exception:
-            return render_template("index.html", errorNumber=1)
+            return render_template("index.html", output=0, errorNumber=1)
 
         websiteObjectRetriever = WebsiteObjectRetriever(soup)
         deserializedJson = websiteObjectRetriever.retrieve()
@@ -75,4 +75,4 @@ def index():
 
         return render_template("index.html", url=url, author=author, title=title, publicationYear=publicationYear, currentDate=currentDate)
 
-    return render_template("index.html", errorNumber = 0)
+    return render_template("index.html", output=0, errorNumber = 0)
