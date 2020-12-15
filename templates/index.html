@@ -16,16 +16,17 @@
 {% block container %}
 	<div class="container__input">
 		<h1>Input a Link:</h1>
-		<form action="/" method="POST">
+		<form action="/" 
+				method="POST">
 			<input id = "urlBox" 
-				name = "urlBox" 
-				type = "text" 
-				placeholder = "URL"/>
+					name = "urlBox" 
+					type = "text" 
+					placeholder = "URL"/>
 			<input id = "submit" 
-			class = "submit"
-			name = "submit" 
-			type = "submit" 
-			disabled />
+					class = "submit"
+					name = "submit" 
+					type = "submit" 
+					disabled />
 		</form>
 		<script>
 			document.querySelector("#urlBox").onkeyup = function() {
@@ -40,6 +41,8 @@
 	<div class="container__output">
 		<h1>Here Is Your Generated Harvard Reference:</h1>
 		<p id="harvardReference">{{ author }} ({{publicationYear}}). <i>{{ title }}</i>. Available: {{ url }}. Last accessed {{ currentDate}}</p>
+		<a href="{{ url_for('unexpected_output') }}"
+			class="unexpectedOutput">Not the output you were expecting?</a>
 	</div>
 	<script>
 		let output = {{ output }};

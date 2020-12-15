@@ -50,3 +50,12 @@ textarea {
 a {
     color: #FFFFFF;
 }
+
+.unexpectedOutput {
+    width: 50%;
+    font-size: 2em;
+}
+
+label {
+    font-size: 2em;
+}

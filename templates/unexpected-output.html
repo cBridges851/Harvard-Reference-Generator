@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+	<title>Harvard Reference Auto Builder - Unexpected Output</title>
+{% endblock %}
+
+{% block container %}
+    <h1>Unexpected Output Form</h1>
+    <p>We do apologise that the output you received was not what you were expecting. 
+        Please understand that every website is written in a different way, meaning they keep 
+        information in different places! <br />
+        Please help us improve this product by putting in the information you were expecting to be found,
+        and we'll work on trying to fix this, and we'll generate the Harvard Reference based on the information
+        you provide!
+    </p>
+	<div class="container__input">
+        <form action="/submit-unexpected-output"
+                method="POST">
+            <label for="author">Author:</label>
+            <input name="author"></input>
+            <br />
+            <label for="title">Title:</label>
+            <input name="title"></input>
+            <br />
+            <label for="websiteName">Website Name:</label>
+            <input name="websiteName"></input>
+            <br />
+            <label for="publicationYear">Publication Year:</label>
+            <input name="publicationYear"
+                    type="number"
+                    min="1990"></input>
+            <br />
+            <label for="userEmail">Your Email Address:</label>
+            <input name="userEmail"
+                type="email"></input>
+
+            <input type="submit"></input>
+        </form>
+    </div>
+    <script>
+        const publicationYearBox = document.getElementsByName("publicationYear")[0];
+        publicationYearBox.setAttribute("max", new Date().getFullYear());
+    </script>
+{% endblock %}

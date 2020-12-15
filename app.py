@@ -7,6 +7,7 @@ from WebsiteObjectRetriever import WebsiteObjectRetriever
 from WebsiteNameFinder import WebsiteNameFinder
 from PublicationYearFinder import PublicationYearFinder
 from CurrentDateFinder import CurrentDateFinder
+import sqlite3
 
 app = Flask(__name__)
 
@@ -76,3 +77,15 @@ def index():
         return render_template("index.html", url=url, author=author, title=title, publicationYear=publicationYear, currentDate=currentDate)
 
     return render_template("index.html", output=0, errorNumber = 0)
+
+@app.route("/unexpected-output")
+def unexpected_output():
+    return render_template("unexpected-output.html")
+
+@app.route("/submit-unexpected-output")
+def submit_unexpected_output():
+    db = sqlite3.connect("HarvardReferenceGenerator.db")
+
+    db.execute("INSERT INTO newUrls (url, expected_author, expected_title, \
+        expected_website, expected_publication_year, user_email) \
+            VALUES")
