@@ -26,8 +26,6 @@ class AuthorFinder():
 
             except Exception:
                 return self.deserializedJson["page"]["pageInfo"]["publisher"]
-            except Exception as e:
-                print(f"Unable to retrieve info: {e}")
 
         # Based on Psychology Today
         if self.soup.find(class_="blog-entry__date--full fine-print") is not None:
