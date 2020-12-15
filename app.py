@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
+import os
 import requests
+import sqlite3
 from bs4 import BeautifulSoup
 from TitleFinder import TitleFinder
 from AuthorFinder import AuthorFinder
@@ -7,15 +9,16 @@ from WebsiteObjectRetriever import WebsiteObjectRetriever
 from WebsiteNameFinder import WebsiteNameFinder
 from PublicationYearFinder import PublicationYearFinder
 from CurrentDateFinder import CurrentDateFinder
-import sqlite3
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
         # CB 2020-10-19 Get the url from the url box
         url = request.form.get("urlBox")
+        session['url'] = url
 
         # CB 2020-10-24 Initial variable values
         author = None
@@ -82,10 +85,19 @@ def index():
 def unexpected_output():
     return render_template("unexpected-output.html")
 
-@app.route("/submit-unexpected-output")
+@app.route("/submit-unexpected-output", methods=["GET", "POST"])
 def submit_unexpected_output():
-    db = sqlite3.connect("HarvardReferenceGenerator.db")
+    if request.method == "POST":
+        db = sqlite3.connect("HarvardReferenceGenerator.db")
+        url = session["url"]
+        expected_author = request.form.get("author")
+        expected_title = request.form.get("title")
+        expected_website_name = request.form.get("websiteName")
+        expected_publication_year = request.form.get("publicationYear")
+        user_email = request.form.get("userEmail")
 
-    db.execute("INSERT INTO newUrls (url, expected_author, expected_title, \
-        expected_website, expected_publication_year, user_email) \
-            VALUES")
+        db.execute("INSERT INTO newUrls (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email) VALUES (?, ?, ?, ?, ?, ?)", (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email))
+        db.commit()
+        return render_template("unexpected-output.html")
+
+    return render_template("unexpected-output.html")
