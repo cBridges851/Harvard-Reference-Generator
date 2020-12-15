@@ -9,8 +9,7 @@
 		if (errorNumber === 1) {
 			alert("The URL You Inputted Could Not Be Found")
 		}
-		
-		
+
 	</script>
 {% endblock %}
 
@@ -22,14 +21,12 @@
 				name = "urlBox" 
 				type = "text" 
 				placeholder = "URL"/>
-			
 			<input id = "submit" 
 			class = "submit"
 			name = "submit" 
 			type = "submit" 
 			disabled />
 		</form>
-		
 		<script>
 			document.querySelector("#urlBox").onkeyup = function() {
 				if (document.querySelector("#urlBox").value === "") {
@@ -40,12 +37,10 @@
 			}
 		</script>
 	</div>
-
 	<div class="container__output">
 		<h1>Here Is Your Generated Harvard Reference:</h1>
 		<p id="harvardReference">{{ author }} ({{publicationYear}}). <i>{{ title }}</i>. Available: {{ url }}. Last accessed {{ currentDate}}</p>
 	</div>
-
 	<script>
 		let output = {{ output }};
 
