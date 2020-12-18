@@ -15,7 +15,7 @@
 
 {% block container %}
 	<div class="container__input">
-		<h1>Input a Link:</h1>
+		<h2>Input a Link:</h2>
 		<form action="/" method="POST">
 			<input id = "urlBox" 
 				name = "urlBox" 
@@ -38,7 +38,8 @@
 		</script>
 	</div>
 	<div class="container__output">
-		<h1>Here Is Your Generated Harvard Reference:</h1>
+		<hr class="solid">
+		<h2>Here Is Your Generated Harvard Reference:</h2>
 		<p id="harvardReference">{{ author }} ({{publicationYear}}). <i>{{ title }}</i>. Available: {{ url }}. Last accessed {{ currentDate}}</p>
 	</div>
 	<script>

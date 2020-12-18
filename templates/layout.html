@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
     {% block title %}
     {% endblock %}
 </head>
 <body>
+    <header>
+        <h1>Harvard Reference Generator</h1>
+    </header>
     <div class="container">
         {% block container %}
         {% endblock %}
