@@ -1,0 +1,39 @@
+@media screen and (min-width: 480px) and (max-width: 770px) {
+    body {
+        margin: 0;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 31px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 0px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .container__input, .container__output {
+        padding: 40px;
+    }
+
+    input {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    #submit {
+        width: 15%;
+    }
+}

@@ -7,11 +7,11 @@
     }
     
     header h1 {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     h2 {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .container {
@@ -28,15 +28,11 @@
 
     input {
         width: 100%;
-        font-size: 17px;
+        font-size: 16px;
     }
 
     p {
-        font-size: 17px;
-    }
-
-    form {
-        padding: 10px;
+        font-size: 16px;
     }
     
     #submit {
