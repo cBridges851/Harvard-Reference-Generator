@@ -95,9 +95,11 @@ def submit_unexpected_output():
         expected_website_name = request.form.get("websiteName")
         expected_publication_year = request.form.get("publicationYear")
         user_email = request.form.get("userEmail")
+        currentDateFinder = CurrentDateFinder()
+        currentDate = currentDateFinder.find()
 
         db.execute("INSERT INTO newUrls (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email) VALUES (?, ?, ?, ?, ?, ?)", (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email))
         db.commit()
-        return render_template("unexpected-output.html")
+        return render_template("index.html", url=url, author=expected_author, title=expected_title, publicationYear=expected_publication_year, currentDate=currentDate)
 
     return render_template("unexpected-output.html")
