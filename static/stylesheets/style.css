@@ -1,26 +1,31 @@
+:root {
+    --subcontainer-padding: 50px;
+    --text-color: #FFFFFF;
+    --page-padding: 0;
+}
+
 body {
     background-color: #1D1D1D;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #FFFFFF;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: var(--page-padding);
     margin: 0;
 }
 
 header {
     width: 100vw;
-    /*height: 10vh;*/
     background-color: #2D2D2D;
     font-family: "Bungee Shade";
-    padding: 0px 0px;
+    padding: var(--page-padding);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 header h1 {
     font-size: 28px;
     margin-left: 20px;
-    font-weight:lighter;
+    font-weight: lighter;
 }
 
 h2 {
@@ -44,7 +49,6 @@ input {
 }
 
 #submit {
-    background-color: #f5edf7;
     width: 10%;
     cursor: pointer;
 }
@@ -54,26 +58,17 @@ input {
 }
 
 p {
-    font-size: 2rem;
-}
-
-textarea {
-    width: 95%;
     font-size: 2em;
 }
 
 a {
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
-.container__input {
-    padding: 50px;
+.container__input, .container__output {
+    padding: var(--subcontainer-padding);
 }
 
 hr.solid {
     border-top: 3px solid #bbb;
-}
-
-.container__output {
-    padding: 50px;
 }
