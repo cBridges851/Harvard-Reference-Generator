@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/tablet.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/mobile.css') }}"/>
+    <link rel="icon" href="../static/Harvard Reference Generator Icon.png"/>
     <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
     {% block title %}
     {% endblock %}
@@ -13,6 +14,8 @@
 <body>
     <header>
         <h1>Harvard Reference Generator</h1>
+        <img class="logo" 
+            src="../static/Harvard Reference Generator.png">
     </header>
     <div class="container">
         {% block container %}
