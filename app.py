@@ -111,6 +111,11 @@ def submit_unexpected_output():
     user_email = request.form.get("userEmail")
     currentDateFinder = CurrentDateFinder()
     currentDate = currentDateFinder.find()
-    db.execute("INSERT INTO newUrls (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email) VALUES (?, ?, ?, ?, ?, ?)", (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email))
-    db.commit()
+
+    urlOccurence = db.execute("SELECT * FROM newUrls WHERE url=?", (url,)).fetchall()
+
+    if len(urlOccurence) < 1:
+        db.execute("INSERT INTO newUrls (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email) VALUES (?, ?, ?, ?, ?, ?)", (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email))
+        db.commit()
+
     return render_template("index.html", url=url, author=expected_author, title=expected_title, publicationYear=expected_publication_year, currentDate=currentDate)
