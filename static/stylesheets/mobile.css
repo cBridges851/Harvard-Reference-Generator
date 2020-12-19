@@ -1,6 +1,7 @@
 @media screen and (max-width: 479px) {
     body {
         margin: 0;
+        font-size: 16px;
     }
     header {
         padding: 0;
@@ -27,11 +28,15 @@
     }
 
     input {
-        width: 100%;
+        width: 90%;
         font-size: 16px;
     }
 
     p {
+        font-size: 16px;
+    }
+    
+    .unexpectedOutput {
         font-size: 16px;
     }
     
