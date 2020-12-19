@@ -15,6 +15,14 @@ app.secret_key = os.urandom(24)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    '''
+        The method that is called when the website is first run and when the user 
+        enters a URL.
+        GET return: just the webpage
+        POST return: the webpage with the author, title, 
+        publicationYear, url and currentDate variables to be put into the Harvard
+        Reference.
+    '''
     if request.method == "POST":
         # CB 2020-10-19 Get the url from the url box
         url = request.form.get("urlBox")
@@ -83,23 +91,31 @@ def index():
 
 @app.route("/unexpected-output")
 def unexpected_output():
+    '''
+        The method that is called when the user selects the link on the index page
+        that indicates that it was not the output they were expecting.
+    '''
     return render_template("unexpected-output.html")
 
-@app.route("/submit-unexpected-output", methods=["GET", "POST"])
+@app.route("/submit-unexpected-output", methods=["POST"])
 def submit_unexpected_output():
-    if request.method == "POST":
-        db = sqlite3.connect("HarvardReferenceGenerator.db")
-        url = session["url"]
-        expected_author = request.form.get("author")
-        expected_title = request.form.get("title")
-        expected_website_name = request.form.get("websiteName")
-        expected_publication_year = request.form.get("publicationYear")
-        user_email = request.form.get("userEmail")
-        currentDateFinder = CurrentDateFinder()
-        currentDate = currentDateFinder.find()
+    '''
+        The method that is called when the user submits details on what they were 
+        expecting the outcome to be of the Harvard Reference.
+        Returns: The index page with the variables that they inputted into the form to make 
+        a Harvard Reference.
+    '''
 
-        db.execute("INSERT INTO newUrls (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email) VALUES (?, ?, ?, ?, ?, ?)", (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email))
-        db.commit()
-        return render_template("index.html", url=url, author=expected_author, title=expected_title, publicationYear=expected_publication_year, currentDate=currentDate)
+    db = sqlite3.connect("HarvardReferenceGenerator.db")
+    url = session["url"]
+    expected_author = request.form.get("author")
+    expected_title = request.form.get("title")
+    expected_website_name = request.form.get("websiteName")
+    expected_publication_year = request.form.get("publicationYear")
+    user_email = request.form.get("userEmail")
+    currentDateFinder = CurrentDateFinder()
+    currentDate = currentDateFinder.find()
 
-    return render_template("unexpected-output.html")
+    db.execute("INSERT INTO newUrls (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email) VALUES (?, ?, ?, ?, ?, ?)", (url, expected_author, expected_title, expected_website_name, expected_publication_year, user_email))
+    db.commit()
+    return render_template("index.html", url=url, author=expected_author, title=expected_title, publicationYear=expected_publication_year, currentDate=currentDate)
