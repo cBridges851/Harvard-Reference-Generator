@@ -8,11 +8,11 @@
     }
     
     header h1 {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     h2 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .container {
@@ -43,5 +43,9 @@
     #submit {
         width: 40%;
         margin-top: 10px;
+    }
+
+    .logo {
+        width: 50px;
     }
 }
