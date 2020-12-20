@@ -90,3 +90,27 @@ label {
     width: 100px;
     margin-right: 20px;
 }
+
+.input__unexpected-output {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.unexpected-output__information-box {
+    display: block;
+}
+
+.unexpected-output__information-box label {
+    float: center;
+}
+
+.unexpected-output__information-box input {
+    float: right;
+    width: 60%
+}
+
+.input__unexpected-output .unexpected-output__submit {
+    width: 15%;
+    margin: auto;
+}

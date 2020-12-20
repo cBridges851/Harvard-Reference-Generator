@@ -17,7 +17,7 @@
 
     .container {
         padding: 0;
-        width: 100%;
+        width: 95vw;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -35,11 +35,11 @@
     p {
         font-size: 16px;
     }
-    
+
     .unexpectedOutput {
         font-size: 16px;
     }
-    
+
     #submit {
         width: 40%;
         margin-top: 10px;
@@ -47,5 +47,13 @@
 
     .logo {
         width: 50px;
+    }
+
+    .input__unexpected-output .unexpected-output__information-box label{
+        font-size: 16px;
+    }
+
+    .input__unexpected-output .unexpected-output__submit {
+        width: 20%;
     }
 }

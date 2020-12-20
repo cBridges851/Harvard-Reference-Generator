@@ -16,25 +16,38 @@
     </p>
 	<div class="container__input">
         <form action="/submit-unexpected-output"
-                method="POST">
-            <label for="author">Author:</label>
-            <input name="author"></input>
+                method="POST"
+                class="input__unexpected-output">
+            <div class="unexpected-output__information-box">
+                <label for="author">Author:</label>
+                <input name="author"></input>
+            </div>
             <br />
-            <label for="title">Title:</label>
-            <input name="title"></input>
+            <div class="unexpected-output__information-box">
+                <label for="title">Title:</label>
+                <input name="title"></input>
+            </div>
             <br />
-            <label for="websiteName">Website Name:</label>
-            <input name="websiteName"></input>
+            <div class="unexpected-output__information-box">
+                <label for="websiteName">Website Name:</label>
+                <input name="websiteName"></input>
+            </div>
             <br />
-            <label for="publicationYear">Publication Year:</label>
-            <input name="publicationYear"
-                    type="number"
-                    min="1990"></input>
+            <div class="unexpected-output__information-box">
+                <label for="publicationYear">Publication Year:</label>
+                <input name="publicationYear"
+                        type="number"
+                        min="1990"></input>
+            </div>
             <br />
-            <label for="userEmail">Your Email Address:</label>
-            <input name="userEmail"
-                type="email"></input>
-            <input type="submit"></input>
+            <div class="unexpected-output__information-box">
+                <label for="userEmail">Your Email Address:</label>
+                <input name="userEmail"
+                    type="email"></input>
+            </div>
+            <br /><br />
+            <input type="submit"
+                    class="unexpected-output__submit"></input>
         </form>
     </div>
     <script>
