@@ -89,6 +89,8 @@ label {
 
 .logo {
     width: 100px;
+    height: 105px;
+    align-self: center;
     margin-right: 20px;
 }
 
