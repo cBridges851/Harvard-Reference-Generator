@@ -2,6 +2,7 @@
     --subcontainer-padding: 50px;
     --text-color: #FFFFFF;
     --page-padding: 0;
+    --button-width: 15%;
 }
 
 body {
@@ -51,7 +52,7 @@ input {
 }
 
 #submit {
-    width: 20%;
+    width: var(--button-width);
     cursor: pointer;
 }
 
@@ -111,6 +112,6 @@ label {
 }
 
 .input__unexpected-output .unexpected-output__submit {
-    width: 15%;
+    width: var(--button-width);
     margin: auto;
 }
