@@ -4,6 +4,7 @@
     --primary-color: #1D1D1D;
     --secondary-color: #2D2D2D;
     --text-color: #FFFFFF;
+    --text-size: 2em;
     --page-padding: 0;
     --button-width: 15%;
     --active-font-weight: 400;
@@ -82,8 +83,8 @@ input {
     font-weight: var(--active-font-weight);
 }
 
-p {
-    font-size: 2em;
+p, label {
+    font-size: var(--text-size);
 }
 
 a {
@@ -102,10 +103,6 @@ hr.solid {
 
 .unexpectedOutput {
     width: 50%;
-    font-size: 2em;
-}
-
-label {
     font-size: 2em;
 }
 

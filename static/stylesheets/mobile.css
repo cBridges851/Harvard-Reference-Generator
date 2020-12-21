@@ -2,11 +2,12 @@
     :root {
         --header-contents-margin: 10px;
         --button-width: 20%;
+        --text-size: 1em;
     }
 
     body {
         margin: 0;
-        font-size: 16px;
+        font-size: var(--text-size);
     }
 
     header {
@@ -40,24 +41,16 @@
 
     input {
         width: 90%;
-        font-size: 16px;
+        font-size: var(--text-size);
     }
 
-    p {
-        font-size: 16px;
-    }
-
-    .unexpectedOutput {
-        font-size: 16px;
+    p, .unexpectedOutput, .input__unexpected-output .unexpected-output__information-box label {
+        font-size: var(--text-size);
     }
 
     #submit {
         width: var(--button-width);
         margin-top: 10px;
-    }
-
-    .input__unexpected-output .unexpected-output__information-box label{
-        font-size: 16px;
     }
 
     .input__unexpected-output .unexpected-output__submit {

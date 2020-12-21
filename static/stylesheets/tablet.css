@@ -1,6 +1,7 @@
 @media screen and (min-width: 480px) and (max-width: 770px) {
     :root {
         --header-contents-margin: 10px;
+        --text-size:1.5em;
     }
 
     body {
@@ -36,15 +37,7 @@
         padding: 40px;
     }
 
-    input {
-        font-size: 25px;
-    }
-
-    p {
-        font-size: 25px;
-    }
-
-    .unexpected-output__information-box label {
-        font-size: 25px;
+    input, p, .unexpected-output__information-box label {
+        font-size: var(--text-size);
     }
 }
