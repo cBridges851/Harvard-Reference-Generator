@@ -1,6 +1,7 @@
 @media screen and (max-width: 479px) {
     :root {
         --header-contents-margin: 10px;
+        --button-width: 20%;
     }
 
     body {
@@ -51,7 +52,7 @@
     }
 
     #submit {
-        width: 40%;
+        width: var(--button-width);
         margin-top: 10px;
     }
 
@@ -60,6 +61,6 @@
     }
 
     .input__unexpected-output .unexpected-output__submit {
-        width: 20%;
+        width: var(--button-width);
     }
 }
