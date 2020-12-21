@@ -5,7 +5,7 @@ Generate Harvard References by just putting a URL into the box! It will get all 
 This project was made because copying and pasting the author, article title, name of the website, year of publication, full URL and the date I last visited the site into Harvard Style Reference Generators felt a bit tedious, and it was even more tedious when writing the reference manually! The aim of this project is to make Harvard Reference generation a lot less tedious and save time.
 
 ## Tech/Framework Used
-This project uses Flask, which is a third-party library that is used as a web framework. Python is used for the backend, HTML and CSS are used for the front-end.
+This project uses Flask, which is a third-party library that is used as a web framework. Python is used for the backend, HTML, CSS and JavaScript are used for the front-end.
 See the [Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/) for more information.
 
 ## Installation
