@@ -95,7 +95,7 @@ a {
 }
 
 hr.solid {
-    border-top: 3px solid #bbb;
+    border-top: 3px solid #BBBBBB;
     width: 90%;
     color: var(--text-color);
 }
