@@ -101,7 +101,7 @@ hr.solid {
     color: var(--text-color);
 }
 
-.unexpectedOutput {
+.output__unexpected_output_link {
     width: 50%;
     font-size: 2em;
 }

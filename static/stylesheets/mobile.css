@@ -44,7 +44,7 @@
         font-size: var(--text-size);
     }
 
-    p, .unexpectedOutput, .input__unexpected-output .unexpected-output__information-box label {
+    p, .output__unexpected_output_link, .input__unexpected-output .unexpected-output__information-box label {
         font-size: var(--text-size);
     }
 

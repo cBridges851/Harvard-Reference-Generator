@@ -42,7 +42,7 @@
 		<h2>Here Is Your Generated Harvard Reference:</h2>
 		<p id="harvardReference">{{ author }} ({{publicationYear}}). <i>{{ title }}</i>. Available: {{ url }}. Last accessed {{ currentDate}}</p>
 		<a href="{{ url_for('unexpected_output') }}"
-			class="unexpectedOutput">Not the output you were expecting?</a>
+			class="output__unexpected_output_link">Not the output you were expecting?</a>
 	</div>
 	<script>
 		let output = {{ output }};
