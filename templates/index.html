@@ -15,21 +15,22 @@
 
 {% block container %}
 	<div class="container__input">
-		<form action="/" method="POST">
+		<form action="/" 
+				method="POST">
 			<h2>Input a Link:</h2>
-			<input id = "input___urlBox" 
-					name = "urlBox" 
-					type = "text" 
-					placeholder = "URL"/>
-			<input id = "input___submit" 
-					class = "input___submit"
-					name = "submit" 
-					type = "submit" 
+			<input id="input___url_box" 
+					name="urlBox" 
+					type="text" 
+					placeholder="URL"/>
+			<input id="input___submit" 
+					class="input___submit"
+					name="submit" 
+					type="submit" 
 					disabled />
 		</form>
 		<script>
-			document.querySelector("#input___urlBox").onkeyup = function() {
-				if (document.querySelector("#input___urlBox").value === "") {
+			document.querySelector("#input___url_box").onkeyup = function() {
+				if (document.querySelector("#input___url_box").value === "") {
 					document.querySelector("#input___submit").disabled = true;
 				} else {
 					document.querySelector("#input___submit").disabled = false;
