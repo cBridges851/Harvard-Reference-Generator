@@ -1,0 +1,59 @@
+@media screen and (max-width: 479px) {
+    :root {
+        --header-contents-margin: 10px;
+        --button-width: 20%;
+        --text-size: 1em;
+    }
+
+    body {
+        margin: 0;
+        font-size: var(--text-size);
+    }
+
+    header {
+        padding: 0;
+    }
+    
+    header h1 {
+        font-size: 15px;
+    }
+
+    .header__logo {
+        width: 50px;
+        height: 55px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 0;
+        width: 95vw;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container__input, .container__output {
+        padding: 10px;
+    }
+
+    input {
+        width: 90%;
+        font-size: var(--text-size);
+    }
+
+    p, .output__unexpected_output_link, .input__unexpected-output .unexpected-output__information-box label {
+        font-size: var(--text-size);
+    }
+
+    #input___submit {
+        width: var(--button-width);
+        margin-top: 10px;
+    }
+
+    .input__unexpected-output .unexpected-output__submit {
+        width: var(--button-width);
+    }
+}

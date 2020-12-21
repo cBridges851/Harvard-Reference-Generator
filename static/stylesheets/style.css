@@ -1,61 +1,138 @@
-body {
-    background-color: #3d1860;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #FFFFFF;
-    display: flex;
+:root {
+    --subcontainer-padding: 50px;
+    --header-contents-margin: 20px;
+    --primary-color: #1D1D1D;
+    --secondary-color: #2D2D2D;
+    --text-color: #FFFFFF;
+    --text-size: 2em;
+    --page-padding: 0;
+    --button-width: 15%;
+    --active-font-weight: 400;
 }
 
-h1 {
-    font-size: 3em;
+body {
+    background-color: var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding: var(--page-padding);
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: var(--secondary-color);
+    font-family: "Bungee Shade";
+    padding: var(--page-padding);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-left: var(--header-contents-margin);
+    font-weight: lighter;
+}
+
+.header__logo {
+    width: 100px;
+    height: 105px;
+    align-self: center;
+    margin-right: var(--header-contents-margin);
+}
+
+h2 {
+    font-size: 2.6em;
 }
 
 .container {
-    width: 75vw;
+    width: 60vw;
     margin: auto;
     text-align: center;
-    border: 1px solid #f5edf7;
-    background-color: #643579;
     padding: 1vw;
     align-content: center;
-    margin-top: 30vh;
-    border-radius: 15px;
 }
 
 input {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 50%;
+    width: 60%;
     border-radius: 10px;
+    transition-duration: 400ms;
 }
 
-#submit {
-    background-color: #f5edf7;
-    width: 10%;
+#input___submit {
+    width: var(--button-width);
     cursor: pointer;
 }
 
-#submit:disabled {
+#input___submit:disabled {
     cursor: default;
 }
 
-p {
-    font-size: 2rem;
+#input___submit:enabled:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-color: var(--text-color);
 }
 
-textarea {
-    width: 95%;
-    font-size: 2em;
+#input___submit:enabled:active {
+    font-weight: var(--active-font-weight);
+}
+
+p, label {
+    font-size: var(--text-size);
 }
 
 a {
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
-.unexpectedOutput {
+.container__input, .container__output {
+    padding: var(--subcontainer-padding);
+}
+
+hr.solid {
+    border-top: 3px solid #BBBBBB;
+    width: 90%;
+    color: var(--text-color);
+}
+
+.output__unexpected_output_link {
     width: 50%;
     font-size: 2em;
 }
 
-label {
-    font-size: 2em;
+.input__unexpected-output {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.unexpected-output__information-box {
+    display: block;
+}
+
+.unexpected-output__information-box label {
+    float: center;
+}
+
+.unexpected-output__information-box input {
+    float: right;
+    width: 60%
+}
+
+.input__unexpected-output .unexpected-output__submit {
+    width: var(--button-width);
+    margin: auto;
+    cursor: pointer;
+}
+
+.input__unexpected-output .unexpected-output__submit:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-color: var(--text-color);
+    font-weight: var(--active-font-weight);
 }

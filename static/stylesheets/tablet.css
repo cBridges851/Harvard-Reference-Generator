@@ -1,0 +1,43 @@
+@media screen and (min-width: 480px) and (max-width: 770px) {
+    :root {
+        --header-contents-margin: 10px;
+        --text-size:1.5em;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+        margin-left: var(--header-contents-margin);
+    }
+
+    .header__logo {
+        width: 90px;
+        height: 95px;
+        margin-right: var(--header-contents-margin);
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .container {
+        padding: 0;
+        width: 95vw;
+        margin: auto;
+    }
+
+    .container__input, .container__output {
+        padding: 40px;
+    }
+
+    input, p, .unexpected-output__information-box label {
+        font-size: var(--text-size);
+    }
+}
