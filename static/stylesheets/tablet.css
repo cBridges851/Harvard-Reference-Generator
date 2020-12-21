@@ -1,4 +1,8 @@
 @media screen and (min-width: 480px) and (max-width: 770px) {
+    :root {
+        --header-contents-margin: 10px;
+    }
+
     body {
         margin: 0;
     }
@@ -9,6 +13,13 @@
 
     header h1 {
         font-size: 30px;
+        margin-left: var(--header-contents-margin);
+    }
+
+    .logo {
+        width: 90px;
+        height: 95px;
+        margin-right: var(--header-contents-margin);
     }
 
     h2 {
@@ -35,11 +46,6 @@
 
     #submit {
         width: 15%;
-    }
-
-    .logo {
-        width: 90px;
-        height: 95px;
     }
 
     .unexpected-output__information-box label {

@@ -1,5 +1,6 @@
 :root {
     --subcontainer-padding: 50px;
+    --header-contents-margin: 20px;
     --text-color: #FFFFFF;
     --page-padding: 0;
     --button-width: 15%;
@@ -27,8 +28,15 @@ header {
 
 header h1 {
     font-size: 28px;
-    margin-left: 20px;
+    margin-left: var(--header-contents-margin);
     font-weight: lighter;
+}
+
+.logo {
+    width: 100px;
+    height: 105px;
+    align-self: center;
+    margin-right: var(--header-contents-margin);
 }
 
 h2 {
@@ -85,13 +93,6 @@ hr.solid {
 
 label {
     font-size: 2em;
-}
-
-.logo {
-    width: 100px;
-    height: 105px;
-    align-self: center;
-    margin-right: 20px;
 }
 
 .input__unexpected-output {

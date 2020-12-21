@@ -1,14 +1,24 @@
 @media screen and (max-width: 479px) {
+    :root {
+        --header-contents-margin: 10px;
+    }
+
     body {
         margin: 0;
         font-size: 16px;
     }
+
     header {
         padding: 0;
     }
     
     header h1 {
         font-size: 15px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 55px;
     }
 
     h2 {
@@ -43,11 +53,6 @@
     #submit {
         width: 40%;
         margin-top: 10px;
-    }
-
-    .logo {
-        width: 50px;
-        height: 55px;
     }
 
     .input__unexpected-output .unexpected-output__information-box label{
