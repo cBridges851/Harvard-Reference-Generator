@@ -21,7 +21,7 @@
 					name = "urlBox" 
 					type = "text" 
 					placeholder = "URL"/>
-			<input id = "submit" 
+			<input id = "input___submit" 
 					class = "input___submit"
 					name = "submit" 
 					type = "submit" 
@@ -30,9 +30,9 @@
 		<script>
 			document.querySelector("#input___urlBox").onkeyup = function() {
 				if (document.querySelector("#input___urlBox").value === "") {
-					document.querySelector("#submit").disabled = true;
+					document.querySelector("#input___submit").disabled = true;
 				} else {
-					document.querySelector("#submit").disabled = false;
+					document.querySelector("#input___submit").disabled = false;
 				}
 			}
 		</script>

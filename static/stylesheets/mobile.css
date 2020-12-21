@@ -48,7 +48,7 @@
         font-size: var(--text-size);
     }
 
-    #submit {
+    #input___submit {
         width: var(--button-width);
         margin-top: 10px;
     }

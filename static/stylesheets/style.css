@@ -63,22 +63,22 @@ input {
     transition-duration: 400ms;
 }
 
-#submit {
+#input___submit {
     width: var(--button-width);
     cursor: pointer;
 }
 
-#submit:disabled {
+#input___submit:disabled {
     cursor: default;
 }
 
-#submit:enabled:hover {
+#input___submit:enabled:hover {
     background-color: var(--primary-color);
     color: var(--text-color);
     border-color: var(--text-color);
 }
 
-#submit:enabled:active {
+#input___submit:enabled:active {
     font-weight: var(--active-font-weight);
 }
 
