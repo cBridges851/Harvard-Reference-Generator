@@ -1,13 +1,16 @@
 :root {
     --subcontainer-padding: 50px;
     --header-contents-margin: 20px;
+    --primary-color: #1D1D1D;
+    --secondary-color: #2D2D2D;
     --text-color: #FFFFFF;
     --page-padding: 0;
     --button-width: 15%;
+    --active-font-weight: 400;
 }
 
 body {
-    background-color: #1D1D1D;
+    background-color: var(--primary-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     display: flex;
@@ -18,7 +21,7 @@ body {
 
 header {
     width: 100%;
-    background-color: #2D2D2D;
+    background-color: var(--secondary-color);
     font-family: "Bungee Shade";
     padding: var(--page-padding);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -57,6 +60,7 @@ input {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 60%;
     border-radius: 10px;
+    transition-duration: 400ms;
 }
 
 #submit {
@@ -66,6 +70,16 @@ input {
 
 #submit:disabled {
     cursor: default;
+}
+
+#submit:enabled:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+#submit:enabled:active {
+    font-weight: var(--active-font-weight);
 }
 
 p {
@@ -83,7 +97,7 @@ a {
 hr.solid {
     border-top: 3px solid #bbb;
     width: 90%;
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
 .unexpectedOutput {
@@ -117,4 +131,12 @@ label {
 .input__unexpected-output .unexpected-output__submit {
     width: var(--button-width);
     margin: auto;
+    cursor: pointer;
+}
+
+.input__unexpected-output .unexpected-output__submit:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-color: var(--text-color);
+    font-weight: var(--active-font-weight);
 }
