@@ -12,7 +12,7 @@ See the [Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/) for m
 This project does not have a public website yet.
 
 To install:
-- Clone the project via your terminal: `git clone https://github.com/cBridges851/Harvard-Referencing-Auto-Builder.git`
+- Clone the project via your terminal: `git clone https://github.com/cBridges851/Harvard-Reference-Generator.git`
 
 - Install Flask via your terminal: `pip install flask`
 See [Flask's Documentation on Installation](https://flask.palletsprojects.com/en/1.1.x/installation/) if you need any more assistance.
