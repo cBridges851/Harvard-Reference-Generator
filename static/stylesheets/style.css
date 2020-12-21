@@ -36,7 +36,7 @@ header h1 {
     font-weight: lighter;
 }
 
-.logo {
+.header__logo {
     width: 100px;
     height: 105px;
     align-self: center;

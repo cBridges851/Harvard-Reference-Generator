@@ -17,7 +17,7 @@
         margin-left: var(--header-contents-margin);
     }
 
-    .logo {
+    .header__logo {
         width: 90px;
         height: 95px;
         margin-right: var(--header-contents-margin);
