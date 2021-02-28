@@ -1,4 +1,4 @@
-# Harvard-Reference-Generator
+# Harvard-Reference-Generator 😁
 Generate Harvard References by just putting a URL into the box! It will get all the information to build the Harvard Reference without you having to find it yourself.
 
 ## Motivation
