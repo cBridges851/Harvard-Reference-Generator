@@ -32,5 +32,8 @@ See [Flask's Documentation on Installation](https://flask.palletsprojects.com/en
 - When you press the submit button, the information you provided will be sent to our database, we will sort the issue and get in contact with you via your provided email, and a Harvard Reference based on what you were expecting is generated.
 ![Result of Unexpected Output Submission](unexpectedOutputResult.png)
 
+## Contributing
+If you have any ideas for features or come across any bugs you'd like to fix, feel free to create an issue! I'll review it and assign you to it as soon as I can :)
+
 ## License
 This project uses the  [GPL-3.0 License](https://github.com/cBridges851/Harvard-Referencing-Auto-Builder/blob/main/LICENSE)
